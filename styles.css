@@ -1,29 +1,61 @@
-
-
 body{
     background: url(./fotos/tables-right-dec.png) no-repeat;
 }
 
 
-
-
-
-.container{
-    margin: auto;
-    width: 100%;
-    background: url(./fotos/videos-right-dec.png) no-repeat;
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 2rem 2rem;
+    border-radius: 5rem;
+    background-color: palevioletred;
+    font-size: 1.8rem;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    transition: all .3s linear;
+    text-decoration: none;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-.container h1{
-    font-size: 2.5rem;
+.btn:hover{
+    transform: scale(1.1);
+    color: var(--gris);
+    background-color: var(--celestepastel);
+}
+
+
+.inicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(/imagenes/001.png) no-repeat;
+    background-size: cover;
+    background-position: cover;
+}
+.inicio .image img{
+    width: 40vh;
+    animation: float 3s linear infinite;
+}
+
+
+
+@keyframes float {
+    0%, 100% {
+      transform: translateY(0rem);
+    }
+    50% {
+      transform: translateY(-3.5rem);
+    }
+  }
+
+.inicio .content h2{
+    text-align: center;
+    font-size: 2rem;
     color: cornflowerblue;
     text-transform: uppercase;
     position: relative;
     animation: radiate 1s ease-in-out infinite alternate;
-    text-align: center;
 }
 
 @keyframes radiate {
@@ -35,84 +67,18 @@ body{
     }
 }
 
-.container h2{
-    font-size: 0.9rem;
-}
-
-
-.container p{
-    color: rgb(58, 57, 57);
-    border-top: ;
-    font-size: 1.8rem;
-}
-
-
-.container a{
-    text-decoration: none;
-    color: rgb(54, 54, 53);
-    font-size: 1.5rem;
-}
-
-
-
-.container .video-thumbnail{
-    text-align: center;
-    width: 320px;
-    height: 180px;
-}
-
-.container .video-thumbnail iframe{
-    width: 100%;
-    height: 100%;
-}
-
-
-
-
-@media (min-width: 451px) and (max-width: 800px) {
-    html {
-        font-size: 55%;
+@media (max-width: 450px){
+    .video-thumbnail {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 25px;
+        height: 0;
     }
-
-    .container{
-        padding: 4rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .video-thumbnail iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
     }
-
-    .container h2{
-        font-size: 1.9rem;
-        text-align: center;
-    }
-
-    .container p{
-        font-size: 1.5rem;
-        text-align: center;
-    }
-
-    .container a{
-        display: contents;
-        justify-content: center;
-        align-items: center;
-    }
-
-    
-
-}
-
-@media (min-width: 801px) {
-    html {
-        font-size: 65%;
-    }
-
-    .container{
-        padding: 8rem;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-
-    }
-
-
 }
